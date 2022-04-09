@@ -1,8 +1,10 @@
 team : Tigers
 
-manager : Donald
+manager : Donald 
 
 members:
 - Linda
 - William
 - Daivd
+- George
+
