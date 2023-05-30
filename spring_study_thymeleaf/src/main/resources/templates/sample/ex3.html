@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang = "ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 th:text="${result}"></h1>
+	<h1 th:text="${dto}"></h1>
+	
+	<script th:inline="javascript">
+	
+		var msg = [[${result}]];
+		var dto = [[${dto}]];
+		
+	</script>	
+	
+	
+	<hr>
+	<h1>Thymeleaf th:block 활용</h1>
+	<p>
+	<ul>
+		<th:block th:each="dto: ${list}">
+			<li th:text="${dto.sno % 5 == 0}? ${dto.sno}: ${dto.name}">
+			</li>
+			</th:block>
+	</ul>
+</body>
+</html>
